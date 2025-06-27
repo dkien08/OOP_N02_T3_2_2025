@@ -1,5 +1,6 @@
 public class TestNumber{
-public void testkien(){
+public static void testkien(){
+     System.out.println("Test Number");
     Number n1= new Number();
     Number n2= new Number();
     n1.i = 2;

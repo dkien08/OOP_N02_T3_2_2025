@@ -1,6 +1,7 @@
 public class TestPassObject {
    public static void testF(){
-    Number2 n = new Number2();
+    System.out.println("Test Pass Object");
+    Number n = new Number();
     n.i =14;
     PassObject.f(n);
     System.out.println(n.i);
