@@ -14,6 +14,7 @@ public static void main(String[] args) throws Exception {
     //TestNotebook.testNotebook();
     //TestPerson.testPerson();
     //TestUser.testUser();
-    TestTime.testTime();
+    //TestTime.testTime();
+    TestFactorial.testFactorial();
 }
 }
