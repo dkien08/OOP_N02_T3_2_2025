@@ -1,3 +1,5 @@
+import exercise.Number;
+
 public class TestNumber{
 public static void testkien(){
      System.out.println("Test Number");

@@ -1,3 +1,5 @@
+import exercise.Person;
+
 public class TestPerson {
     public static void testPerson(){
         Person p =new Person();

@@ -1,3 +1,4 @@
+package exercise;
 public class TestShortCircuit {
    public static void testShortCircuit(){
    System.out.println("Test Short Circuit");

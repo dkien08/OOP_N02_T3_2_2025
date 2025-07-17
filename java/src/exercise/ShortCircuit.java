@@ -1,3 +1,4 @@
+package exercise;
 public class ShortCircuit {
     static boolean test1(int val){return val<1;}
     static boolean test2(int val){return val<2;}

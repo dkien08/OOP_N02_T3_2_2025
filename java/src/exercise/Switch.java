@@ -1,3 +1,4 @@
+package exercise;
 public class Switch {
     public static void testSwitch(){
          System.out.println("Switch Test");

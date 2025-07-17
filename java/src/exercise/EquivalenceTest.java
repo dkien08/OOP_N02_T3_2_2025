@@ -1,3 +1,4 @@
+package exercise;
 public class EquivalenceTest {
     public static void testeq(){
          System.out.println("Equivalence Test");

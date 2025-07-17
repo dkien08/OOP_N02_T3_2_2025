@@ -1,3 +1,4 @@
+package exercise;
 public class Test {
     public static int testif(int Val,int target){
          System.out.println("Test if else , return");

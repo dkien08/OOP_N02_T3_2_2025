@@ -1,3 +1,5 @@
+import exercise.User;
+
 public class TestUser {
     public static void testUser(){
         User.setUser("Duc Kien","Sd@12345");

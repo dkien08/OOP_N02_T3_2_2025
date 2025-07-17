@@ -1,3 +1,4 @@
+package exercise;
 import java.util.Random;
 public class MyRand{
     public static int testRandom(){

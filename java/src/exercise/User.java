@@ -1,3 +1,4 @@
+package exercise;
 public class User {
     private static String userName;
     private static String userPassword;

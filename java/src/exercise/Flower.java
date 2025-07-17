@@ -1,3 +1,4 @@
+package exercise;
 public class Flower {
     int petalCount=0;
     String s = new String("NULL");
