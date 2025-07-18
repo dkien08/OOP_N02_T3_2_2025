@@ -1,7 +1,10 @@
 package quanli;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+
 import doituong.Phong;
+
 
 public class QuanLyPhong {
     private List<Phong> danhSachPhong = new ArrayList<>();
@@ -18,12 +21,12 @@ public class QuanLyPhong {
         }
 
         // Kiểm tra loại phòng hợp lệ (giả sử chỉ có "Đơn", "Đôi", "VIP")
-        if (!loaiPhong.equals("Đơn") && !loaiPhong.equals("Đôi") && !loaiPhong.equals("VIP")) {
+        if (!loaiPhong.equals("Single") && !loaiPhong.equals("Double") && !loaiPhong.equals("VIP")) {
             return false; // Trả về false nếu loại phòng không hợp lệ
         }
 
         // Kiểm tra trạng thái hợp lệ (giả sử chỉ có "Trống", "Đã đặt", "Đang sử dụng")
-        if (!trangThai.equals("Trống") && !trangThai.equals("Đã đặt") && !trangThai.equals("Đang sử dụng")) {
+        if (!trangThai.equals("Trong") && !trangThai.equals("Da dat") && !trangThai.equals("Dang su dung")) {
             return false; // Trả về false nếu trạng thái không hợp lệ
         }
 
@@ -92,5 +95,26 @@ public class QuanLyPhong {
             }
         }
         return false; // Trả về false nếu không tìm thấy phòng
+    }
+     public List<Phong> xemTatCaPhong() {
+        return new ArrayList<>(danhSachPhong);
+    }
+
+    public Optional<Phong> timPhongTheoSoPhong(String soPhong) {
+        return danhSachPhong.stream()
+                             .filter(p -> p.getSoPhong().equals(soPhong))
+                             .findFirst();
+    }
+
+    public void hienThiDanhSachPhong() {
+        if (danhSachPhong.isEmpty()) {
+            System.out.println(" Danh sách phòng trống.");
+        } else {
+            System.out.println("--- Danh sách phòng ---");
+            for (Phong p : danhSachPhong) {
+                System.out.println(p);
+            }
+            System.out.println("-----------------------");
+        }
     }
 }

@@ -6,25 +6,25 @@ public class TestQuanli {
         QuanLyPhong quanLyPhong = new QuanLyPhong();
 
         // Thêm phòng mới
-        Phong phong1 = new Phong("101", "Deluxe", "Available", 150.0, 1);
-        Phong phong2 = new Phong("102", "Standard", "Booked", 100.0, 1);
-        quanLyPhong.themPhong(phong1);
-        quanLyPhong.themPhong(phong2);
+       
+        quanLyPhong.themPhong("101", "Single", "Trong", 150.0, 1);
+        quanLyPhong.themPhong("102", "Single", "Trong", 100.0, 1);
+        quanLyPhong.themPhong("203", "Single", "Dang su dung", 200.0, 2);
+        quanLyPhong.themPhong("304", "VIP", "Da dat", 300.0, 3);
 
-        // Hiển thị danh sách phòng
-        System.out.println("Danh sách phòng:");
-        for (Phong phong : quanLyPhong.getDanhSachPhong()) {
-            System.out.println(phong);
-        }
+        // Xem danh sách phòng
+        quanLyPhong.hienThiDanhSachPhong();
+        // Sửa thông tin phòng
+       quanLyPhong.suaPhong("101", "Double","Trong", 100, 1);
+       
+        // Xem lại danh sách phòng sau khi sửa
+        quanLyPhong.hienThiDanhSachPhong();
 
-        // Cập nhật trạng thái phòng
-        phong1.setTrangThai("Booked");
-        quanLyPhong.capNhatPhong(phong1);
+        // Xóa phòng
+        quanLyPhong.xoaPhong("102");
 
-        // Hiển thị lại danh sách phòng sau khi cập nhật
-        System.out.println("\nDanh sách phòng sau khi cập nhật:");
-        for (Phong phong : quanLyPhong.getDanhSachPhong()) {
-            System.out.println(phong);
-        }
-    }   
+        // Xem lại danh sách phòng sau khi xóa
+        quanLyPhong.hienThiDanhSachPhong();
+        
+    }
 }
